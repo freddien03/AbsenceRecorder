@@ -12,7 +12,7 @@ struct DivisionItem: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "\(division.Students.count).circle")
+            Image(systemName: "\(division.students.count).circle")
             Text("\(division.code)")
         }
     }
