@@ -23,8 +23,14 @@ class Division {
         }
     }
     
-    func createAbsenceOrGetExistingIfAvailable(for date: Date) {
-        //do this
+    func createAbsenceOrGetExistingIfAvailable(for date: Date) -> Absence {
+        if let existingAbsence = getAbsence(for: date) {
+            return existingAbsence
+        } else {
+            let absence = Absence(date: date, students: students)
+            absences.append(absence)
+            return absence
+        }
     }
     
     #if DEBUG
